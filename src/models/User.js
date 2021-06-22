@@ -14,6 +14,18 @@ const userSchema = new Schema({
         type: String,
         unique: true
     },
+    business_photo: {
+        type: Array
+    },
+    business_name: {
+        type: String
+    },
+    description: {
+        type: String
+    },
+    address: {
+        type: String
+    },
     email: {
         type: String,
         unique: true

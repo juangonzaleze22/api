@@ -4,13 +4,31 @@ import jwt from 'jsonwebtoken';
 import config from '../config'; 
 
 export const register = async (req, res) => {
-    const {name, lastname, username, email, password, roles, status} = req.body
+    const {
+        name, 
+        lastname,
+        username,
+        business_photo,
+        business_name,
+        description,
+        address,
+        email,
+        password, 
+        roles,
+        status
+    } = req.body
+
+    console.log(req.body);
 
     const newUser = new User({
         name,
         lastname,
         username,
         email,
+        business_photo,
+        business_name,
+        description,
+        address,
         password: await User.encryptPassword(password),
         status
     });
