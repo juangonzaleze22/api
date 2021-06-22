@@ -4,6 +4,10 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 
 var _mongoose = _interopRequireDefault(require("mongoose"));
 
+require('dotenv').config();
+
+console.log('here...', process.env.MONGODB_URI); // local mongodb://localhost/api_db;
+
 _mongoose["default"].connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
